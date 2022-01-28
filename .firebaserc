@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "angular-szakd": {
+      "hosting": {
+        "szakdolgozat": [
+          "angular-szakd"
+        ]
+      }
+    }
+  }
+}
