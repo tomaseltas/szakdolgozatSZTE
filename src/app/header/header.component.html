@@ -1,73 +1,153 @@
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light " >
-    <img class="navbar-brand"  src="https://i.imgur.com/ihHUm8K.png" routerLink="/home" style="cursor: pointer;" alt="pic" height="80" >
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse " id="navbarNavDropdown">
-      <ul class="navbar-nav">
-        <div class="d-inline-flex p-2" >
-          <a style="color:white">{{ now | date:'HH:mm:ss'}}</a>
+<nav class="navbar navbar-expand-lg navbar-light" style="height: 10%">
+  <img
+    class="navbar-brand"
+    src="https://i.imgur.com/ihHUm8K.png"
+    routerLink="/home"
+    style="cursor: pointer"
+    alt="pic"
+    height="80"
+  />
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarNavDropdown"
+    aria-controls="navbarNavDropdown"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <div class="d-inline-flex p-2">
+        <a style="color: white">{{ now | date: "HH:mm:ss" }}</a>
+      </div>
+      <li
+        class="nav-item"
+        style="padding-left: 10px; cursor: default; color: black"
+      >
+        <a class="nav-link" style="border: 3px solid rgb(255, 255, 255)"
+          ><a style="color: white">{{ currentDate | date: "yyyy-MM-dd" }}</a></a
+        >
+      </li>
+
+      <li
+        class="nav-item"
+        style="padding-left: 10px; cursor: default; color: black"
+        *ngIf="user"
+      >
+        <a class="nav-link" style="border: 3px solid rgb(255, 255, 255)"
+          ><a style="color: white">Bejelentkezve mint: {{ user?.name }}</a></a
+        >
+      </li>
+
+      <li class="nav-item active" style="padding-left: 100px" *ngIf="user">
+        <a class="nav-link" routerLink="/home" routerLinkActive="activebutton"
+          ><a style="color: white">Főoldal</a></a
+        >
+      </li>
+
+      <li class="nav-item dropdown" style="padding-left: 40px" *ngIf="user">
+        <a
+          class="nav-link menu-item dropdown-toggle"
+          data-bs-toggle="dropdown"
+          role="button"
+          aria-haspopup="true"
+          aria-expanded="false"
+          ><a style="color: white">Edzéstervek</a></a
+        >
+        <div class="dropdown dropdown-menu">
+          <a class="dropdown-item menu-item" href="/individual"
+            ><a style="color: rgb(0, 0, 0)">Egyéni</a></a
+          >
+          <a class="dropdown-item menu-item" href="/team"
+            ><a style="color: rgb(0, 0, 0)">Csapatban</a></a
+          >
         </div>
-        <li class="nav-item " style="padding-left: 10px; cursor: default; color: black;">
-  
-          <a class="nav-link"   style="border:3px solid rgb(255, 255, 255)"><a style="color:white">{{currentDate | date:'yyyy-MM-dd'}}</a></a>
-        </li>
+      </li>
 
-        <li class="nav-item " style="padding-left: 10px; cursor: default; color: black;" *ngIf="user">
-  
-          <a class="nav-link"   style="border:3px solid rgb(255, 255, 255)"><a style="color:white">Bejelentkezve mint: {{user?.name}}</a></a>
-        </li>
+      <li class="nav-item active" style="padding-left: 40px" *ngIf="user">
+        <a class="nav-link" routerLinkActive="activebutton" routerLink="/meals"
+          ><a style="color: white">Étkezés</a></a
+        >
+      </li>
 
-        
-  
-        
-  
-        <li class="nav-item active" style="padding-left: 100px;" *ngIf="user">
-  
-          <a class="nav-link"  routerLink="/home" routerLinkActive="activebutton"><a style="color: white">Főoldal</a></a>
-        </li>
-  
-        <li class="nav-item dropdown" style="padding-left: 40px;" *ngIf="user"> 
-          <a class="nav-link menu-item dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><a style="color: white">Edzéstervek</a></a>      
-          <div class=" dropdown dropdown-menu" >
-              <a class="dropdown-item menu-item" href="#"><a style="color: rgb(0, 0, 0)">Egyéni</a></a>
-              <a class="dropdown-item menu-item" href="#"><a style="color: rgb(0, 0, 0)">Csapatban</a></a>
-          </div>
-      </li> 
-  
-        <li class="nav-item active" style="padding-left: 40px;" *ngIf="user">
-  
-          <a class="nav-link"   routerLinkActive="activebutton"><a style="color: white">Étkezés</a></a>
-        </li>
-  
-        <li class="nav-item active" style="padding-left: 40px;" *ngIf="user">
-  
-          <a class="nav-link"   routerLinkActive="activebutton"><a style="color: white">Motiváció</a></a>
-        </li>
-      </ul>
+      <li class="nav-item active" style="padding-left: 40px" *ngIf="user">
+        <a class="nav-link" routerLinkActive="activebutton"
+          ><a style="color: white">Motiváció</a></a
+        >
+      </li>
+    </ul>
 
-      
-  
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0" style="padding-right: 10px" routerLink="/login" *ngIf="!user" >
-        <li class="nav-item">
-          <a class="nav-link" style="cursor: pointer; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"><i class="bi bi-door-open" style="color: white;"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-door-open" viewBox="0 0 16 16">
-            <path d="M8.5 10c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1z"/>
-            <path d="M10.828.122A.5.5 0 0 1 11 .5V1h.5A1.5 1.5 0 0 1 13 2.5V15h1.5a.5.5 0 0 1 0 1h-13a.5.5 0 0 1 0-1H3V1.5a.5.5 0 0 1 .43-.495l7-1a.5.5 0 0 1 .398.117zM11.5 2H11v13h1V2.5a.5.5 0 0 0-.5-.5zM4 1.934V15h6V1.077l-6 .857z"/>
-          </svg></i><a style="color: white" >Bejelentkezés</a></a>
-        </li>
-      </ul>
+    <ul
+      class="navbar-nav ms-auto mb-2 mb-lg-0"
+      style="padding-right: 10px"
+      routerLink="/login"
+      *ngIf="!user"
+    >
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          style="
+            cursor: pointer;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,
+              sans-serif;
+          "
+          ><i class="bi bi-door-open" style="color: white"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="36"
+              height="36"
+              fill="currentColor"
+              class="bi bi-door-open"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8.5 10c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1z"
+              />
+              <path
+                d="M10.828.122A.5.5 0 0 1 11 .5V1h.5A1.5 1.5 0 0 1 13 2.5V15h1.5a.5.5 0 0 1 0 1h-13a.5.5 0 0 1 0-1H3V1.5a.5.5 0 0 1 .43-.495l7-1a.5.5 0 0 1 .398.117zM11.5 2H11v13h1V2.5a.5.5 0 0 0-.5-.5zM4 1.934V15h6V1.077l-6 .857z"
+              /></svg></i
+          ><a style="color: white">Bejelentkezés</a></a
+        >
+      </li>
+    </ul>
 
-      <ul class="navbar-nav ms-auto mb-2 mb-lg-0" style="padding-right: 10px" routerLink="/login"  (click)="logout()" *ngIf="user">
-        <li class="nav-item">
-          <a class="nav-link" style="cursor: pointer; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"><i class="bi bi-door-open" style="color: white;"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-door-open" viewBox="0 0 16 16">
-            <path d="M8.5 10c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1z"/>
-            <path d="M10.828.122A.5.5 0 0 1 11 .5V1h.5A1.5 1.5 0 0 1 13 2.5V15h1.5a.5.5 0 0 1 0 1h-13a.5.5 0 0 1 0-1H3V1.5a.5.5 0 0 1 .43-.495l7-1a.5.5 0 0 1 .398.117zM11.5 2H11v13h1V2.5a.5.5 0 0 0-.5-.5zM4 1.934V15h6V1.077l-6 .857z"/>
-          </svg></i><a style="color: white" >Kijelenetkezés</a></a>
-        </li>
-      </ul>
-
-    </div>
-  
-  </nav>
-  
+    <ul
+      class="navbar-nav ms-auto mb-2 mb-lg-0"
+      style="padding-right: 10px"
+      routerLink="/login"
+      (click)="logout()"
+      *ngIf="user"
+    >
+      <li class="nav-item">
+        <a
+          class="nav-link"
+          style="
+            cursor: pointer;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial,
+              sans-serif;
+          "
+          ><i class="bi bi-door-open" style="color: white"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="36"
+              height="36"
+              fill="currentColor"
+              class="bi bi-door-open"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8.5 10c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1z"
+              />
+              <path
+                d="M10.828.122A.5.5 0 0 1 11 .5V1h.5A1.5 1.5 0 0 1 13 2.5V15h1.5a.5.5 0 0 1 0 1h-13a.5.5 0 0 1 0-1H3V1.5a.5.5 0 0 1 .43-.495l7-1a.5.5 0 0 1 .398.117zM11.5 2H11v13h1V2.5a.5.5 0 0 0-.5-.5zM4 1.934V15h6V1.077l-6 .857z"
+              /></svg></i
+          ><a style="color: white">Kijelentkezés</a></a
+        >
+      </li>
+    </ul>
+  </div>
+</nav>

@@ -29,6 +29,9 @@ import { FormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
 import { RegisterComponent } from './register/register.component';
 import { MustMatchDirective } from './helper/must-match.directive';
+import { IndividualComponent } from './training/individual/individual.component';
+import { TeamComponent } from './training/team/team.component';
+import { MealsComponent } from './meals/meals.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +42,10 @@ import { MustMatchDirective } from './helper/must-match.directive';
     HeaderComponent,
     PageNotFoundComponent,
     RegisterComponent,
-    MustMatchDirective
+    MustMatchDirective,
+    IndividualComponent,
+    TeamComponent,
+    MealsComponent
   ],
   imports: [
     BrowserModule,

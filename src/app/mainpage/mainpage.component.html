@@ -1,136 +1,192 @@
+<div class="motivation" style="height: 4%">
+  <b
+    ><p>
+      Ha egy tojást külső erő tör össze, az élet véget ér. Ha belső erő, akkor
+      egy élet kezdődik. A nagy dolgok mindig belülről indulnak el.
+    </p></b
+  >
+</div>
+<div class="row">
+  <!--Első bal-->
 
-    <div class="motivation">
-        <b><p>Ha egy tojást külső erő tör össze, az élet véget ér. Ha belső erő, akkor egy élet kezdődik. A nagy dolgok mindig belülről indulnak el.</p></b>
-    </div>
-    <div class="row">
-    
-            <!--Első bal-->
-    
-        <div class="col">
-          
-        <div class="card text-white bg-dark" style=" height: 800px;  margin-bottom: 5px;border: 2px solid  white;border-radius: 25px;">
-        <div class="card-body">
-            <div class="sectiontitle">
-                <h2 >Mai teendők</h2>
-                <span class="headerLine"></span>
-            </div>
-            <div style="padding-left: 50px; ">
-                <mat-selection-list #shoes style="width: 80%; ">
-                    <mat-list-option *ngFor="let shoe of typesOfShoes">
-                      {{shoe}}
-                    </mat-list-option>
-                  </mat-selection-list>
-                  
-                  <p style="padding-left: 50px;">
-                    Options selected: {{shoes.selectedOptions.selected.length}}
-                  </p>
-            </div>
-            
+  <div class="col">
+    <div
+      class="card text-white bg-dark"
+      style="
+        height: 800px;
+        margin-bottom: 5px;
+        border: 2px solid white;
+        border-radius: 25px;
+      "
+    >
+      <div class="card-body">
+        <div class="sectiontitle">
+          <h2>Mai teendők</h2>
+          <span class="headerLine"></span>
         </div>
-            
-        
-        
-    </div>
-    
-        </div>
-    
-        <!--Középső-->
-        <div class="col-6">
-          
-        <div class="card text-white bg-dark" style=" height: 800px;  margin-bottom: 5px; border: 2px solid  white;border-radius: 25px;">
-        <div class="card-body">
-          <div class="sectiontitle">
-            <h2>Sportolói statisztikák</h2>
-            <span class="headerLine"></span>
-        </div>
-        <div id="projectFacts" class="sectionClass" >
-            <div class="fullWidth eight columns" style="position: relative; margin:auto;bottom: 40px;left: 10px;">
-                <div class="projectFactsWrap" >
-                    <div class="item wow fadeInUpBig animated animated" data-number="12" style="visibility: visible; border: 1px white solid;">
-                        <fa-icon [icon]="running" size = "4x" ></fa-icon>
-                        <p id="number1" class="number">{{merfoldcount}}</p>
-                        <span></span>
-                        <p>Mérföld lefutva</p>
-                    </div>
-                    <div class="item wow fadeInUpBig animated animated" data-number="55" style="visibility: visible;border: 1px white solid">
-                        <fa-icon [icon]="food" size = "4x"></fa-icon>
-                        <p id="number2" class="number">86150</p>
-                        <span></span>
-                        <p>Gramm étel bevíve</p>
-                    </div>
-                    <div class="item wow fadeInUpBig animated animated" data-number="359" style="visibility: visible;border: 1px white solid">
-                        <fa-icon [icon]="coffee" size = "4x"></fa-icon>
-                        <p id="number3" class="number">{{kavecount}}</p>
-                        <span></span>
-                        <p>csésze kávé megíva</p>
-                    </div>
-                    <div class="item wow fadeInUpBig animated animated" data-number="246" style="visibility: visible;border: 1px white solid">
-                        <fa-icon [icon]="smile" size = "4x"></fa-icon>
-                        <p id="number4" class="number">{{napcounter}}</p>
-                        <span></span>
-                        <p>Sikeres nap</p>
-                    </div>
-    
-                    <div class="item wow fadeInUpBig animated animated" data-number="246" style="visibility: visible;border: 1px white solid">
-                        <fa-icon [icon]="pills" size = "4x"></fa-icon>
-                        <p id="number5" class="number">{{vitamincount}}</p>
-                        <span></span>
-                        <p>Vitamin bevíve</p>
-                    </div>
-    
-                    <div class="item wow fadeInUpBig animated animated" data-number="246" style="visibility: visible;border: 1px white solid">
-                        <fa-icon [icon]="exercise" size = "4x"></fa-icon>
-                        <p id="number6" class="number">{{pulzuscount}}</p>
-                        <span></span>
-                        <p>Átlag pulzus</p>
-                    </div>
-                </div>
-                
-                    
-               
-            </div>
-        </div>
-        </div></div>
-    
-        </div>
-    
-            <!--Jobb-->
-    
-        <div class="col">
-          
-        <div class="card text-white bg-dark" style=" height: 800px;  margin-bottom: 5px;border: 2px solid  white;border-radius: 25px;">
-        <div class="card-body">
-            <div class="sectiontitle">
-                <h2>Mai ajánlott motivációs videó</h2>
-                <span class="headerLine"></span>
-            </div>
-          <div class="image-video-wrp centered" style="width: 90%; height: 90%;">
-            <figure>
-                <ng-container *ngIf="videodisabled; else videoblock">
-                    
-                    <img src="../assets/images/video-poster.jpg" class="img-fluid thumblin">
-                </ng-container>
-                <ng-template #videoblock>
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/mAQP5ASH-BA" allowfullscreen></iframe>
-                </ng-template>
-                <div class="play-icon-box ">
-                    <img (click)="changeImg()" [title]="play" [src]="videoIcon" alt="">
-                </div>
-            </figure>
-        </div>
-    
-        <div class="sectiontitle" style="padding-top: 75%;" >
-            <h2>Mai ajánlott edzés</h2>
-            <span class="headerLine"></span>
-        </div>
-    
-       
-        
-        <button mat-raised-button style="left: 33%; top: 2%;" (click)="onCreate()">Edzés mutatása</button>
-        
-            
-    
-        </div></div>
-    
+        <div style="padding-left: 50px">
+          <mat-selection-list #shoes style="width: 80%">
+            <mat-list-option *ngFor="let shoe of typesOfShoes">
+              {{ shoe }}
+            </mat-list-option>
+          </mat-selection-list>
+
+          <p style="padding-left: 50px">
+            Options selected: {{ shoes.selectedOptions.selected.length }}
+          </p>
         </div>
       </div>
+    </div>
+  </div>
+
+  <!--Középső-->
+  <div class="col-6">
+    <div
+      class="card text-white bg-dark"
+      style="
+        height: 800px;
+        margin-bottom: 5px;
+        border: 2px solid white;
+        border-radius: 25px;
+      "
+    >
+      <div class="card-body">
+        <div class="sectiontitle">
+          <h2>Sportolói statisztikák</h2>
+          <span class="headerLine"></span>
+        </div>
+        <div id="projectFacts" class="sectionClass">
+          <div
+            class="fullWidth eight columns"
+            style="position: relative; margin: auto; bottom: 40px; left: 10px"
+          >
+            <div class="projectFactsWrap">
+              <div
+                class="item wow fadeInUpBig animated animated"
+                data-number="12"
+                style="visibility: visible; border: 1px white solid"
+              >
+                <fa-icon [icon]="running" size="4x"></fa-icon>
+                <p id="number1" class="number">{{ merfoldcount }}</p>
+                <span></span>
+                <p>Mérföld lefutva</p>
+              </div>
+              <div
+                class="item wow fadeInUpBig animated animated"
+                data-number="55"
+                style="visibility: visible; border: 1px white solid"
+              >
+                <fa-icon [icon]="food" size="4x"></fa-icon>
+                <p id="number2" class="number">{{ etelcount }}</p>
+                <span></span>
+                <p>Dekagramm étel bevíve (x10 gramm)</p>
+              </div>
+              <div
+                class="item wow fadeInUpBig animated animated"
+                data-number="359"
+                style="visibility: visible; border: 1px white solid"
+              >
+                <fa-icon [icon]="coffee" size="4x"></fa-icon>
+                <p id="number3" class="number">{{ kavecount }}</p>
+                <span></span>
+                <p>Csésze kávé megíva</p>
+              </div>
+              <div
+                class="item wow fadeInUpBig animated animated"
+                data-number="246"
+                style="visibility: visible; border: 1px white solid"
+              >
+                <fa-icon [icon]="smile" size="4x"></fa-icon>
+                <p id="number4" class="number">{{ napcounter }}</p>
+                <span></span>
+                <p>Sikeres nap</p>
+              </div>
+
+              <div
+                class="item wow fadeInUpBig animated animated"
+                data-number="246"
+                style="visibility: visible; border: 1px white solid"
+              >
+                <fa-icon [icon]="pills" size="4x"></fa-icon>
+                <p id="number5" class="number">{{ vitamincount }}</p>
+                <span></span>
+                <p>Vitamin bevíve</p>
+              </div>
+
+              <div
+                class="item wow fadeInUpBig animated animated"
+                data-number="246"
+                style="visibility: visible; border: 1px white solid"
+              >
+                <fa-icon [icon]="exercise" size="4x"></fa-icon>
+                <p id="number6" class="number">{{ pulzuscount }}</p>
+                <span></span>
+                <p>Átlag pulzus</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Jobb-->
+
+  <div class="col">
+    <div
+      class="card text-white bg-dark"
+      style="
+        height: 800px;
+        margin-bottom: 5px;
+        border: 2px solid white;
+        border-radius: 25px;
+      "
+    >
+      <div class="card-body">
+        <div class="sectiontitle">
+          <h2>Mai ajánlott motivációs videó</h2>
+          <span class="headerLine"></span>
+        </div>
+        <div class="image-video-wrp centered" style="width: 90%; height: 90%">
+          <figure>
+            <ng-container *ngIf="videodisabled; else videoblock">
+              <img
+                src="../assets/images/video-poster.jpg"
+                class="img-fluid thumblin"
+              />
+            </ng-container>
+            <ng-template #videoblock>
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/mAQP5ASH-BA"
+                allowfullscreen
+              ></iframe>
+            </ng-template>
+            <div class="play-icon-box">
+              <img
+                (click)="changeImg()"
+                [title]="play"
+                [src]="videoIcon"
+                alt=""
+              />
+            </div>
+          </figure>
+        </div>
+
+        <div class="sectiontitle" style="padding-top: 75%">
+          <h2>Mai ajánlott edzés</h2>
+          <span class="headerLine"></span>
+        </div>
+
+        <button
+          mat-raised-button
+          style="left: 33%; top: 2%"
+          (click)="onCreate()"
+        >
+          Edzés mutatása
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
