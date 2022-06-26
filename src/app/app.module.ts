@@ -32,6 +32,7 @@ import { MustMatchDirective } from './helper/must-match.directive';
 import { IndividualComponent } from './training/individual/individual.component';
 import { TeamComponent } from './training/team/team.component';
 import { MealsComponent } from './meals/meals.component';
+import { MotivationComponent } from './motivation/motivation.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { MealsComponent } from './meals/meals.component';
     MustMatchDirective,
     IndividualComponent,
     TeamComponent,
-    MealsComponent
+    MealsComponent,
+    MotivationComponent
   ],
   imports: [
     BrowserModule,

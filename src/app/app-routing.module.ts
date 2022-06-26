@@ -4,6 +4,7 @@ import { AuthGuard } from './guards/auth.guard';
 import { LoginComponent } from './mainpage/login/login.component';
 import { MainpageComponent } from './mainpage/mainpage.component';
 import { MealsComponent } from './meals/meals.component';
+import { MotivationComponent } from './motivation/motivation.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { RegisterComponent } from './register/register.component';
 import { IndividualComponent } from './training/individual/individual.component';
@@ -13,6 +14,7 @@ const appRoutes: Routes = [
   { path: 'home', component: MainpageComponent, canActivate: [AuthGuard] },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
+  { path: 'motivation', component: MotivationComponent },
   { path: 'individual', component: IndividualComponent },
   { path: 'team', component: TeamComponent },
   { path: 'meals', component: MealsComponent },

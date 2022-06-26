@@ -39,7 +39,7 @@
         *ngIf="user"
       >
         <a class="nav-link" style="border: 3px solid rgb(255, 255, 255)"
-          ><a style="color: white">Bejelentkezve mint: {{ user?.email }}</a></a
+          ><a style="color: white">Bejelentkezve mint: {{ user?.name }}</a></a
         >
       </li>
 
@@ -75,7 +75,10 @@
       </li>
 
       <li class="nav-item active" style="padding-left: 40px" *ngIf="user">
-        <a class="nav-link" routerLinkActive="activebutton"
+        <a
+          class="nav-link"
+          routerLinkActive="activebutton"
+          routerLink="/motivation"
           ><a style="color: white">Motiváció</a></a
         >
       </li>

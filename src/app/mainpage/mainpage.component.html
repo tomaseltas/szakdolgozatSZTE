@@ -1,4 +1,4 @@
-<div class="motivation" style="height: 4%">
+<div class="motivation" style="height: 6%">
   <b
     ><p>
       Ha egy tojást külső erő tör össze, az élet véget ér. Ha belső erő, akkor
@@ -6,14 +6,13 @@
     </p></b
   >
 </div>
-<div class="row">
+<div class="row" style="height: 84%">
   <!--Első bal-->
-
-  <div class="col">
+  <div class="col" style="height: 100%">
     <div
       class="card text-white bg-dark"
       style="
-        height: 800px;
+        height: 100%;
         margin-bottom: 5px;
         border: 2px solid white;
         border-radius: 25px;
@@ -40,11 +39,11 @@
   </div>
 
   <!--Középső-->
-  <div class="col-6">
+  <div class="col-6" style="height: 100%">
     <div
       class="card text-white bg-dark"
       style="
-        height: 800px;
+        height: 100%;
         margin-bottom: 5px;
         border: 2px solid white;
         border-radius: 25px;
@@ -66,7 +65,7 @@
                 data-number="12"
                 style="visibility: visible; border: 1px white solid"
               >
-                <fa-icon [icon]="running" size="4x"></fa-icon>
+                <fa-icon [icon]="running" class="icon" size="4x"></fa-icon>
                 <p id="number1" class="number">{{ merfoldcount }}</p>
                 <span></span>
                 <p>Mérföld lefutva</p>
@@ -132,11 +131,11 @@
 
   <!--Jobb-->
 
-  <div class="col">
+  <div class="col" style="height: 100%">
     <div
       class="card text-white bg-dark"
       style="
-        height: 800px;
+        height: 100%;
         margin-bottom: 5px;
         border: 2px solid white;
         border-radius: 25px;
@@ -147,7 +146,10 @@
           <h2>Mai ajánlott motivációs videó</h2>
           <span class="headerLine"></span>
         </div>
-        <div class="image-video-wrp centered" style="width: 90%; height: 90%">
+        <div
+          class="image-video-wrp centered"
+          style="width: 90%; height: 80%; padding-top: 15px"
+        >
           <figure>
             <ng-container *ngIf="videodisabled; else videoblock">
               <img
