@@ -1,43 +1,244 @@
 <div class="col">
   <div
-    class="card text-white bg-dark"
     style="
-      position: absolute;
+      position: relative;
       top: 10%;
       right: 0;
       bottom: 0;
       left: 0;
-      border: 15px solid orange;
-      margin-bottom: 5px;
-      border: 2px solid white;
-      border-radius: 25px;
+      border: 1px solid white;
+      border-radius: 15px;
+      height: 100%;
+      background-color: rgb(33, 37, 41);
     "
   >
-    <div id="boxes">
-      <div class="sectiontitle">
-        <h1 class="ml1" style="padding-top: 15px">
-          <span class="text-wrapper">
-            <span class="line line1"></span>
-            <span class="letters">MEALPREP</span>
-            <span class="line line2"></span>
-          </span>
-        </h1>
-        <span class="headerLine"></span>
+    <div class="header-text">
+      <h1>Válaszd ki a neked tetsző ételt!</h1>
+    </div>
+    <!-- TO-DO: checkelt boxok esetén csak az adott étel recepteket mutassa ki -->
+    <div class="header-selector">
+      <div class="selects">
+        <input type="checkbox" checked id="reggeli" />
+        <label for="reggeli">Reggeli</label>
+      </div>
+      <div class="selects">
+        <input type="checkbox" checked id="ebed" />
+        <label for="ebed">Ebéd</label>
+      </div>
+      <div class="selects">
+        <input type="checkbox" checked id="vacsora" />
+        <label for="vacsora">Vacsora</label>
       </div>
     </div>
+    <!-- TO-DO: HOVER esetén recept nevének kimutatása -->
+    <div id="gallery">
+      <img
+        src="https://food.fnr.sndimg.com/content/dam/images/food/fullset/2012/7/25/0/FNM_090112-Weeknight-Chicken-Salad-DInner_s4x3.jpg.rend.hgtvcom.826.620.suffix/1371607357221.jpeg"
+        style="cursor: pointer"
+        onclick="window.location='https://www.bbcgoodfood.com/recipes/chicken-satay-salad;'"
+      />
+      <img
+        src="https://media.glide.mailplus.co.uk/prod/images/950_633/gm-0d1ac6a3-8ed4-4eda-9533-5682947af8cb-header3914355.jpg"
+        style="cursor: pointer"
+        onclick="window.location='https://www.bbcgoodfood.com/recipes/linguine-avocado-tomato-lime;'"
+      />
+      <img
+        src="https://images.immediate.co.uk/production/volatile/sites/30/2020/08/pork-souvlaki-1380e9d.jpg"
+        style="cursor: pointer"
+        onclick="window.location='https://www.bbcgoodfood.com/recipes/pork-souvlaki;'"
+      />
+      <img
+        src="https://images.immediate.co.uk/production/volatile/sites/30/2021/08/Roasted-cod-with-zingy-beetroot-salad-aff170b.jpg?quality=90&resize=556,505"
+        style="cursor: pointer"
+        onclick="window.location='https://www.bbcgoodfood.com/recipes/roasted-cod-with-zingy-beetroot-salad;'"
+      />
+      <img
+        src="https://images.immediate.co.uk/production/volatile/sites/30/2021/08/Salsa-verde-baked-eggs-80334f1.jpg"
+        style="cursor: pointer"
+        onclick="window.location='https://www.bbcgoodfood.com/recipes/salsa-verde-baked-eggs;'"
+      />
+      <img
+        src="https://images.immediate.co.uk/production/volatile/sites/30/2020/08/omelette-pancakes-with-tomato-pepper-sauce-557a351.jpg"
+        style="cursor: pointer"
+        onclick="window.location='https://www.bbcgoodfood.com/recipes/omelette-pancakes-tomato-pepper-sauce;'"
+      />
+      <img
+        src="https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chicken-fattoush-778e018.jpg?quality=90&resize=440,400"
+        style="cursor: pointer"
+        onclick="window.location='https://www.bbcgoodfood.com/recipes/chicken-fattoush;'"
+      />
+      <img
+        src="https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chicken-pearl-barley-risotto-bc1b717.jpg"
+        style="cursor: pointer"
+        onclick="window.location='https://www.bbcgoodfood.com/recipes/chicken-pearl-barley-risotto;'"
+      />
+      <img
+        src="https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chicken-satay-salad-8f5b068.jpg?quality=90&webp=true&resize=300,272"
+        style="cursor: pointer"
+        onclick="window.location='https://www.bbcgoodfood.com/recipes/roast-chicken-roots;'"
+      />
+      <img
+        src="https://images.immediate.co.uk/production/volatile/sites/30/2020/08/overnight-oats-32a2747.jpg?quality=90&webp=true&resize=300,272"
+        style="cursor: pointer"
+        onclick="window.location='https://www.bbcgoodfood.com/recipes/overnight-oats;'"
+      />
+      <img
+        src="https://images-gmi-pmc.edge-generalmills.com/9aaa5c61-860a-427f-a745-b5221f6b909e.jpg"
+        style="cursor: pointer"
+        onclick="window.location='https://www.bbcgoodfood.com/recipes/breakfast-burrito;'"
+      />
+      <img
+        src="https://images.immediate.co.uk/production/volatile/sites/30/2020/08/healthy-fc28587.jpg?quality=90&webp=true&resize=300,272"
+        style="cursor: pointer"
+        onclick="window.location='https://www.bbcgoodfood.com/recipes/healthy-pancakes;'"
+      />
+      <!-- <img
+        src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/2.jpg"
+      />
+      <img
+        src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/3.jpg"
+      />
+      <img
+        src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/4.jpg"
+      />
+      <img
+        src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/5.jpg"
+      />
+      <img
+        src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/6.jpg"
+      />
+      <img
+        src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/7.jpg"
+      />
+      <img
+        src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/8.jpg"
+      />
+      <img
+        src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/9.jpg"
+      />
+      <img
+        src="https://cdn.freecodecamp.org/curriculum/css-photo-gallery/10.jpg"
+      /> -->
+    </div>
+    <!--  <div class="container" style="margin-top: 50px">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="card-sl">
+            <div class="card-image">
+              <img
+                src="https://www.thespruceeats.com/thmb/LeyN-7W9T0KB2nl6pcuDZckHnjc=/4288x2848/filters:fill(auto,1)/wiener-schnitzel-recipe-1447089-Hero-5b587d6c46e0fb0071b0059d.jpg"
+              />
+            </div>
 
-    <div class="row">
-      <div class="col-md-4">
-        <h2>CONTENT BOX 1</h2>
-      </div>
+            <div class="card-heading">Rántott hús salátával</div>
+            <div class="card-text">
+              A rántott hús bizonyítottan a sportolók egyik legjobb barátja, nem
+              elég hogy finom, de rengeteg fehérjét tartalmaz amely az izmok
+              növekedését segíti elő.
+            </div>
+            <a
+              href="https://www.thespruceeats.com/wiener-schnitzel-recipe-1447089"
+              class="card-button"
+              target="_blank"
+            >
+              Recept</a
+            >
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card-sl">
+            <div class="card-image">
+              <img
+                src="https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chicken-satay-salad-8f5b068.jpg?quality=90&webp=true&resize=440,400"
+              />
+            </div>
 
-      <div class="col-md-4">
-        <h2>CONTENT BOX 2</h2>
-      </div>
+            <div class="card-heading">Rántott hús salátával</div>
+            <div class="card-text">
+              A rántott hús bizonyítottan a sportolók egyik legjobb barátja, nem
+              elég hogy finom, de rengeteg fehérjét tartalmaz amely az izmok
+              növekedését segíti elő.
+            </div>
+            <a
+              href="https://www.thespruceeats.com/wiener-schnitzel-recipe-1447089"
+              class="card-button"
+              target="_blank"
+            >
+              Recept</a
+            >
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card-sl">
+            <div class="card-image">
+              <img
+                src="https://www.thespruceeats.com/thmb/LeyN-7W9T0KB2nl6pcuDZckHnjc=/4288x2848/filters:fill(auto,1)/wiener-schnitzel-recipe-1447089-Hero-5b587d6c46e0fb0071b0059d.jpg"
+              />
+            </div>
 
-      <div class="col-md-4">
-        <h2>CONTENT BOX 3</h2>
+            <div class="card-heading">Rántott hús salátával</div>
+            <div class="card-text">
+              A rántott hús bizonyítottan a sportolók egyik legjobb barátja, nem
+              elég hogy finom, de rengeteg fehérjét tartalmaz amely az izmok
+              növekedését segíti elő.
+            </div>
+            <a
+              href="https://www.thespruceeats.com/wiener-schnitzel-recipe-1447089"
+              class="card-button"
+              target="_blank"
+            >
+              Recept</a
+            >
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card-sl">
+            <div class="card-image">
+              <img
+                src="https://www.thespruceeats.com/thmb/LeyN-7W9T0KB2nl6pcuDZckHnjc=/4288x2848/filters:fill(auto,1)/wiener-schnitzel-recipe-1447089-Hero-5b587d6c46e0fb0071b0059d.jpg"
+              />
+            </div>
+
+            <div class="card-heading">Rántott hús salátával</div>
+            <div class="card-text">
+              A rántott hús bizonyítottan a sportolók egyik legjobb barátja, nem
+              elég hogy finom, de rengeteg fehérjét tartalmaz amely az izmok
+              növekedését segíti elő.
+            </div>
+            <a
+              href="https://www.thespruceeats.com/wiener-schnitzel-recipe-1447089"
+              class="card-button"
+              target="_blank"
+            >
+              Recept</a
+            >
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card-sl">
+            <div class="card-image">
+              <img
+                src="https://www.thespruceeats.com/thmb/LeyN-7W9T0KB2nl6pcuDZckHnjc=/4288x2848/filters:fill(auto,1)/wiener-schnitzel-recipe-1447089-Hero-5b587d6c46e0fb0071b0059d.jpg"
+              />
+            </div>
+
+            <div class="card-heading">Rántott hús salátával</div>
+            <div class="card-text">
+              A rántott hús bizonyítottan a sportolók egyik legjobb barátja, nem
+              elég hogy finom, de rengeteg fehérjét tartalmaz amely az izmok
+              növekedését segíti elő.
+            </div>
+            <a
+              href="https://www.thespruceeats.com/wiener-schnitzel-recipe-1447089"
+              class="card-button"
+              target="_blank"
+            >
+              Recept</a
+            >
+          </div>
+        </div>
       </div>
     </div>
+  </div> -->
   </div>
 </div>
