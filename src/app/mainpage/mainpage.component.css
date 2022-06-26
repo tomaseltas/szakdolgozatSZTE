@@ -204,8 +204,9 @@ td {
   align-items: center;
   background-color: rgb(28, 30, 32);
   color: white;
-  border-radius: 20px;
-  height: 6%;
+  height: 5%;
+  width: 99.7%;
+  margin: 2px auto 0 auto;
 }
 
 /*VIDEO*/
